@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pages - Your Books From The Best Writer</title>
+    <title>มุมหยิบหนังสือ | มุมมองนักอ่านพระเจ้า – เรื่องย่อและจุดเด่น</title>
+    <meta name="description"
+        content="ทำความรู้จักมุมมองนักอ่านพระเจ้า นิยายแฟนตาซีเอาชีวิตรอดที่คิมดกจาเป็นผู้อ่านเพียงคนเดียว พร้อมภาพประกอบ เรื่องย่อ และประเด็นน่าสนใจของซีรีส์หนังสือ 23 เล่ม">
+    <meta name="robots" content="index, follow">
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,462 +21,31 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Prompt:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
-    <style>
-        /* Custom CSS - embedded for single file execution */
-        :root {
-            --primary-navy: #1B2534;
-            --dark-navy: #0F172A;
-            --accent-gold: #FFCA28;
-            --accent-gold-hover: #E5B219;
-            --light-bg: #F8FAFC;
-            --border-color: #E2E8F0;
-            --text-dark: #1E293B;
-            --text-muted: #64748B;
-        }
-
-        body {
-            font-family: 'Prompt', sans-serif;
-            color: var(--text-dark);
-            background-color: #FFFFFF;
-            overflow-x: hidden;
-        }
-
-        h1,
-        h2,
-        h3,
-        .font-heading {
-            font-family: 'Prompt', 'Playfair Display', serif;
-        }
-
-        .navbar {
-            background-color: var(--primary-navy);
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
-
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.8rem;
-            color: #FFFFFF !important;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .navbar-brand i {
-            color: var(--accent-gold);
-        }
-
-        .nav-link {
-            color: #CBD5E1 !important;
-            font-weight: 400;
-            margin: 0 8px;
-            transition: color 0.2s ease;
-        }
-
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--accent-gold) !important;
-        }
-
-        .btn-gold {
-            background-color: var(--accent-gold);
-            color: var(--primary-navy);
-            font-weight: 600;
-            border: none;
-            padding: 0.6rem 1.5rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(255, 202, 40, 0.25);
-        }
-
-        .btn-gold:hover {
-            background-color: var(--accent-gold-hover);
-            color: var(--primary-navy);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(255, 202, 40, 0.35);
-        }
-
-        .btn-outline-custom {
-            border: 2px solid var(--accent-gold);
-            color: #FFFFFF;
-            font-weight: 500;
-            padding: 0.6rem 1.5rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-outline-custom:hover {
-            background-color: var(--accent-gold);
-            color: var(--primary-navy);
-        }
-
-        .hero-section {
-            background-color: var(--primary-navy);
-            color: #FFFFFF;
-            padding: 4rem 0 6rem 0;
-            position: relative;
-        }
-
-        .badge-welcome {
-            color: var(--accent-gold);
-            font-style: italic;
-            font-size: 1.25rem;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 1rem;
-            position: relative;
-        }
-
-        .badge-welcome::before {
-            content: '';
-            display: inline-block;
-            width: 35px;
-            height: 2px;
-            background-color: var(--accent-gold);
-            vertical-align: middle;
-            margin-right: 12px;
-        }
-
-        .hero-title {
-            font-size: 3.2rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-desc {
-            color: #94A3B8;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            max-width: 520px;
-        }
-
-        .stat-card-box {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-top: 2.5rem;
-        }
-
-        .stat-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .stat-dot {
-            width: 14px;
-            height: 14px;
-            background-color: var(--accent-gold);
-            border-radius: 50%;
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            color: #94A3B8;
-            margin-bottom: 2px;
-        }
-
-        .stat-value {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #FFFFFF;
-        }
-
-        .book-card {
-            background: #FFFFFF;
-            color: var(--text-dark);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .book-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .book-cover {
-            height: 280px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .book-cover-1 {
-            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
-            color: #FFFFFF;
-            border-bottom: 4px solid var(--accent-gold);
-        }
-
-        .book-cover-2 {
-            background: linear-gradient(135deg, #334155 0%, #1E293B 100%);
-            color: #FFFFFF;
-            border-bottom: 4px solid var(--accent-gold);
-        }
-
-        .book-cover h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
-
-        .benefits-section {
-            padding: 6rem 0;
-            background-color: var(--light-bg);
-        }
-
-        .section-badge {
-            color: #2563EB;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--primary-navy);
-            margin-bottom: 1.2rem;
-        }
-
-        .benefit-card {
-            background: #FFFFFF;
-            border-radius: 12px;
-            padding: 2rem;
-            height: 100%;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .benefit-card:hover {
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
-            transform: translateY(-5px);
-            border-color: var(--accent-gold);
-        }
-
-        .benefit-icon {
-            width: 56px;
-            height: 56px;
-            background-color: rgba(255, 202, 40, 0.15);
-            color: var(--primary-navy);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .benefit-card h5 {
-            font-weight: 600;
-            font-size: 1.15rem;
-            margin-bottom: 0.8rem;
-            color: var(--primary-navy);
-        }
-
-        .benefit-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .learn-section {
-            padding: 6rem 0;
-            background-color: #FFFFFF;
-        }
-
-        .learn-number-box {
-            background-color: var(--accent-gold);
-            color: var(--primary-navy);
-            font-weight: 700;
-            font-size: 1.2rem;
-            width: 48px;
-            height: 48px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .learn-item {
-            background-color: var(--light-bg);
-            border-radius: 10px;
-            padding: 1.5rem;
-            display: flex;
-            gap: 1.2rem;
-            align-items: flex-start;
-            border: 1px solid var(--border-color);
-            height: 100%;
-            transition: border-color 0.2s ease;
-        }
-
-        .learn-item:hover {
-            border-color: var(--accent-gold);
-        }
-
-        .learn-item p {
-            margin: 0;
-            color: var(--text-dark);
-            font-size: 1rem;
-            line-height: 1.6;
-            font-weight: 500;
-        }
-
-        .learn-image-container {
-            position: relative;
-            padding: 15px;
-        }
-
-        .learn-image-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 80%;
-            height: 80%;
-            border: 4px solid var(--accent-gold);
-            border-radius: 12px;
-            z-index: 1;
-        }
-
-        .learn-img {
-            position: relative;
-            z-index: 2;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            max-height: 520px;
-        }
-
-        .quote-banner {
-            background: linear-gradient(135deg, #0F172A 0%, #1B2534 100%);
-            color: #FFFFFF;
-            padding: 6rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .quote-banner::before {
-            content: '\f10d';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 12rem;
-            color: rgba(255, 255, 255, 0.03);
-            pointer-events: none;
-        }
-
-        .quote-sub {
-            color: #94A3B8;
-            font-size: 1.1rem;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-        }
-
-        .quote-main {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent-gold);
-            margin-bottom: 1.8rem;
-            line-height: 1.4;
-        }
-
-        .quote-desc {
-            color: #CBD5E1;
-            font-size: 1.05rem;
-            max-width: 850px;
-            margin: 0 auto 2.5rem auto;
-            line-height: 1.8;
-            font-weight: 300;
-        }
-
-        footer {
-            background-color: #0B1120;
-            color: #64748B;
-            padding: 2rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 991px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .quote-main {
-                font-size: 1.8rem;
-            }
-
-            .learn-image-container {
-                margin-top: 2.5rem;
-            }
-        }
-
-        /* คุมขนาดและสัดส่วนของรูปภาพในกล่อง */
-        .book-cover {
-            position: relative;
-            overflow: hidden;
-            padding: 0;
-            height: 320px;
-            /* ปรับความสูงของปกตามต้องการ */
-        }
-
-        .book-cover-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /* รักษาสัดส่วนรูปภาพไม่ให้เบี้ยว */
-            transition: transform 0.3s ease;
-        }
-
-        /* เอฟเฟกต์ขยายรูปภาพเล็กน้อยเมื่อ Hover */
-        .book-card:hover .book-cover-img {
-            transform: scale(1.05);
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="top">
 
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top" aria-label="เมนูหลัก">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fa-solid fa-book-open"></i> มุมหยิบหนังสือ
+            <a class="navbar-brand" href="#top">
+                <i class="fa-solid fa-book-open" aria-hidden="true"></i> มุมหยิบหนังสือ
             </a>
             <button class="navbar-toggler navbar-dark border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="เปิดหรือปิดเมนู">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#benefits">Keys</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#aeo">AEO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#seo">SEO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#order">Epilouge</a></li>
                 </ul>
-                <div class="d-flex align-items-center gap-3">
-                </div>
             </div>
         </div>
     </nav>
@@ -518,7 +90,7 @@
                                     <div>
                                         <div class="stat-label">Rating:</div>
                                         <div class="stat-value">4.53/5 <small class="text-white-50 fw-normal"
-                                                style="font-size: 0.75rem;"><a
+                                                class="rating-source"><a
                                                     href="https://www.goodreads.com/book/show/220520518-omniscient-reader-s-viewpoint-vol-1"
                                                     target="_blank" rel="noopener noreferrer">(Goodreads)</a></small>
                                         </div>
@@ -537,8 +109,7 @@
                         <div class="col-md-6 col-sm-10">
                             <div class="book-card rounded overflow-hidden shadow-sm">
                                 <div class="book-cover">
-                                    <img src="images/6000057178_front_XXL.webp" alt="มุมมองนักอ่านพระเจ้า เล่ม 1"
-                                        class="book-cover-img">
+                                    <img src="images/01.webp" alt="มุมมองนักอ่านพระเจ้า เล่ม 1" class="book-cover-img">
                                 </div>
                                 <div class="p-3 bg-white">
                                     <p class="small text-muted mb-1">
@@ -576,8 +147,7 @@
                         <div class="col-md-6 col-sm-10">
                             <div class="book-card rounded overflow-hidden shadow-sm">
                                 <div class="book-cover">
-                                    <img src="images/1000273884_front_XXL (1).webp" alt="มุมมองนักอ่านพระเจ้า เล่ม 23"
-                                        class="book-cover-img">
+                                    <img src="images/23.webp" alt="มุมมองนักอ่านพระเจ้า เล่ม 23" class="book-cover-img">
                                 </div>
                                 <div class="p-3 bg-white">
                                     <p class="small text-muted mb-1">
@@ -619,10 +189,245 @@
         </div> <!-- ✅ ปิด container -->
     </header>
 
+
+    <!-- Image Gallery: Bootstrap Carousel (23 image slots) -->
+    <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+        <div class="container">
+
+            <div class="gallery-topline">
+                <span class="gallery-hint"><i class="fa-regular fa-images" aria-hidden="true"></i> ทั้งหมด 23 ภาพ</span>
+                <span class="gallery-counter" id="gallerySlideCounter" aria-live="polite">01 / 23</span>
+            </div>
+
+            <div id="bookGalleryCarousel" class="carousel slide gallery-carousel" data-bs-ride="carousel"
+                data-bs-interval="3000" data-bs-pause="hover" data-bs-touch="true"
+                aria-label="แกลเลอรีภาพประกอบ 23 ภาพ">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 01">
+                            <img src="images/01.webp" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 01 ของมุมมองนักอ่านพระเจ้า">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 1</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 02">
+                            <img src="images/02.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 02 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 2</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 03">
+                            <img src="images/03.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 03 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 3</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 04">
+                            <img src="images/04.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 04 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 4</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 05">
+                            <img src="images/05.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 05 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 5</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 06">
+                            <img src="images/06.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 06 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 6</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 07">
+                            <img src="images/07.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 07 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 7</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 08">
+                            <img src="images/08.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 08 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 8</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 09">
+                            <img src="images/09.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 09 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 9</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 10">
+                            <img src="images/10.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 10 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 10</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 11">
+                            <img src="images/11.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 11 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 11</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 12">
+                            <img src="images/12.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 12 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 12</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 13">
+                            <img src="images/13.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 13 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 13</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 14">
+                            <img src="images/14.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 14 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 14</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 15">
+                            <img src="images/15.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 15 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 15</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 16">
+                            <img src="images/16.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 16 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 16</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 17">
+                            <img src="images/17.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 17 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 17</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 18">
+                            <img src="images/18.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 18 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 18</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 19">
+                            <img src="images/19.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 19 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 19</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 20">
+                            <img src="images/20.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 20 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 20</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 21">
+                            <img src="images/21.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 21 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 21</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 22">
+                            <img src="images/22.gif" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 22 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 22</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="gallery-image-frame" data-placeholder="ช่องสำหรับใส่รูปภาพที่ 23">
+                            <img src="images/23.webp" class="d-block w-100 gallery-image"
+                                alt="ภาพประกอบลำดับที่ 23 ของมุมมองนักอ่านพระเจ้า" loading="lazy">
+                        </div>
+                        <div class="carousel-caption gallery-caption">
+                            <h3>มุมมองนักอ่านพระเจ้า 23</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#bookGalleryCarousel"
+                    data-bs-slide="prev" aria-label="ภาพก่อนหน้า">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">ก่อนหน้า</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#bookGalleryCarousel"
+                    data-bs-slide="next" aria-label="ภาพถัดไป">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">ถัดไป</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <section class="benefits-section" id="benefits">
         <div class="container">
-            <div class="text-center max-w-700 mx-auto mb-5" style="max-width: 800px;">
-                <span class="section-badge">Key Benefits</span>
+            <div class="text-center max-w-700 mx-auto mb-5 benefits-intro">
                 <h2 class="section-title">ได้อะไรจากการอ่านหนังสือซีรีย์นี้?</h2>
                 <p class="text-muted fs-6">
                     เปิดมุมมองใหม่ผ่านการอ่าน ทำความเข้าใจเรื่องราวและข้อคิดจากแต่ละเล่ม
@@ -690,149 +495,214 @@
         </div>
     </section>
 
+
+    <!-- AEO: direct answers to common reader questions -->
+    <section class="aeo-section" id="aeo" aria-labelledby="aeo-title">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2 class="section-title" id="aeo-title">คำถามที่พบบ่อยเกี่ยวกับมุมมองนักอ่านพระเจ้า</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <article class="aeo-card h-100">
+                        <span class="aeo-number">01</span>
+                        <h3>หนังสือเกี่ยวกับเรื่องอะไร?</h3>
+                        <p>มุมมองนักอ่านพระเจ้าเล่าเรื่องของคิมดกจา ผู้เป็นผู้อ่านเพียงคนเดียวของนิยายออนไลน์เรื่อง
+                            <strong>สามวิธีการเอาชีวิตรอดในโลกที่ล่มสลาย</strong> ซึ่งมีเนื้อหากว่าสามพันตอน
+                            วันหนึ่งโลกจริงกลับเปลี่ยนแปลงไปเหมือนเหตุการณ์ในนิยาย พร้อมกับมีสถานการณ์ท้าทายมนุษย์
+                            คิมดกจาจึงต้องใช้ความรู้จากเรื่องที่อ่านเพื่อเอาชีวิตรอด
+                            แต่การรู้ว่าจะเกิดอะไรขึ้นไม่ได้หมายความว่าจะลงมือทำได้ง่ายเสมอไป
+                        </p>
+                    </article>
+                </div>
+                <div class="col-lg-6">
+                    <article class="aeo-card h-100">
+                        <span class="aeo-number">02</span>
+                        <h3>เหมาะกับใคร?</h3>
+                        <p>เหมาะกับผู้อ่านที่ชอบนิยายแฟนตาซี แนวเอาชีวิตรอด เรื่องราวขนาดยาว
+                            และสถานการณ์ที่ตัวละครต้องใช้ความรู้กับการตัดสินใจเพื่อผ่านอุปสรรคต่าง ๆ
+                            รวมถึงผู้ที่ชอบติดตามพัฒนาการของเรื่องราวและข้อคิดเกี่ยวกับความเพียร การอ่าน
+                            และการไม่ยอมแพ้ต่อโชคชะตา</p>
+                    </article>
+                </div>
+                <div class="col-lg-6">
+                    <article class="aeo-card h-100">
+                        <span class="aeo-number">03</span>
+                        <h3>ต้องมีพื้นฐานหรือไม่?</h3>
+                        <p>ไม่จำเป็นต้องมีพื้นฐานเกี่ยวกับเรื่องมาก่อน ผู้อ่านสามารถเริ่มทำความรู้จักโลกและเหตุการณ์ต่าง
+                            ๆ ไปพร้อมกับเนื้อเรื่องได้ แนะนำให้อ่านเรียงจากเล่ม 1
+                            เพื่อเข้าใจจุดเริ่มต้นของคิมดกจาและการเปลี่ยนแปลงของโลกอย่างต่อเนื่อง</p>
+                    </article>
+                </div>
+                <div class="col-lg-6">
+                    <article class="aeo-card h-100">
+                        <span class="aeo-number">04</span>
+                        <h3>ได้ประโยชน์อะไร?</h3>
+                        <p>ผู้อ่านจะได้ติดตามเรื่องราวและทำความเข้าใจแนวคิดจากหนังสือ
+                            ฝึกมองสถานการณ์ผ่านมุมมองที่หลากหลาย และเก็บเกี่ยวข้อคิดเรื่องความเพียร
+                            การอ่านอย่างต่อเนื่อง การตัดสินใจ และการไม่ยอมแพ้
+                            ซึ่งสามารถนำไปใช้เป็นแรงบันดาลใจในการเรียนรู้และพัฒนาตนเองได้</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- On-page SEO content in a Bootstrap Accordion -->
+    <section class="seo-section" id="seo" aria-labelledby="seo-title">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2 class="section-title" id="seo-title">ข้อมูลหนังสือและรายละเอียดเพิ่มเติม</h2>
+                </p>
+            </div>
+
+            <div class="accordion seo-accordion" id="seoAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="seoHeadingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#seoCollapseOne" aria-expanded="true" aria-controls="seoCollapseOne">
+                            เรื่องย่อ: มุมมองนักอ่านพระเจ้า
+                        </button>
+                    </h3>
+                    <div id="seoCollapseOne" class="accordion-collapse collapse show" aria-labelledby="seoHeadingOne"
+                        data-bs-parent="#seoAccordion">
+                        <div class="accordion-body">
+                            <p><strong>มุมมองนักอ่านพระเจ้า</strong> เป็นเรื่องราวของคิมดกจา
+                                ชายผู้ติดตามนิยายออนไลน์เรื่องสามวิธีการเอาชีวิตรอดในโลกที่ล่มสลายเพียงคนเดียว
+                                เมื่อโลกที่เขาอาศัยอยู่กลายเป็นเหมือนโลกในนิยาย เขาจึงต้องเผชิญสถานการณ์ต่าง ๆ
+                                โดยอาศัยความรู้เกี่ยวกับเนื้อเรื่องที่อ่านมา
+                                เรื่องราวชวนติดตามการเปลี่ยนแปลงของโลกและความแตกต่างระหว่างการรู้อนาคตกับการลงมือเปลี่ยนแปลงมัน
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="seoHeadingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#seoCollapseTwo" aria-expanded="false" aria-controls="seoCollapseTwo">
+                            แนวเรื่องและประเด็นสำคัญ
+                        </button>
+                    </h3>
+                    <div id="seoCollapseTwo" class="accordion-collapse collapse" aria-labelledby="seoHeadingTwo"
+                        data-bs-parent="#seoAccordion">
+                        <div class="accordion-body">
+                            <p>เนื้อหานำเสนอการเอาชีวิตรอดในโลกที่เปลี่ยนแปลงไปตามเหตุการณ์ในนิยาย
+                                โดยมีประเด็นเกี่ยวกับความรู้ การตัดสินใจ การเผชิญอุปสรรค ความเพียร
+                                และความสัมพันธ์ระหว่างผู้อ่านกับเรื่องราวที่ติดตาม
+                                เหมาะสำหรับผู้ที่ชื่นชอบนิยายแฟนตาซีที่มีการดำเนินเรื่องต่อเนื่องและสถานการณ์ท้าทายตัวละคร
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="seoHeadingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#seoCollapseThree" aria-expanded="false" aria-controls="seoCollapseThree">
+                            ตัวละครหลักและองค์ประกอบของเรื่อง
+                        </button>
+                    </h3>
+                    <div id="seoCollapseThree" class="accordion-collapse collapse" aria-labelledby="seoHeadingThree"
+                        data-bs-parent="#seoAccordion">
+                        <div class="accordion-body">
+                            <p><strong>คิมดกจา</strong> เป็นตัวละครสำคัญที่มีความรู้เกี่ยวกับนิยายต้นฉบับ
+                                เพราะเขาเป็นผู้อ่านเพียงคนเดียวที่ติดตามเรื่องดังกล่าวจนถึงตอนสุดท้าย
+                                ความรู้ของเขากลายเป็นสิ่งสำคัญเมื่อเหตุการณ์ในนิยายเกิดขึ้นจริง
+                                แต่การเปลี่ยนแปลงของโลกและการมีตัวแปรใหม่ทำให้เรื่องราวไม่ได้ดำเนินไปเหมือนต้นฉบับทุกประการ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="seoHeadingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#seoCollapseFour" aria-expanded="false" aria-controls="seoCollapseFour">
+                            คำค้นหาที่เกี่ยวข้องกับหนังสือ
+                        </button>
+                    </h3>
+                    <div id="seoCollapseFour" class="accordion-collapse collapse" aria-labelledby="seoHeadingFour"
+                        data-bs-parent="#seoAccordion">
+                        <div class="accordion-body">
+                            <p>ผู้อ่านสามารถใช้คำค้น เช่น <strong>มุมมองนักอ่านพระเจ้า</strong>, <strong>Omniscient
+                                    Reader's Viewpoint</strong>, <strong>คิมดกจา</strong>,
+                                <strong>นิยายแฟนตาซี</strong>, <strong>นิยายเอาชีวิตรอด</strong> และ
+                                <strong>นิยายออนไลน์</strong> เพื่อค้นหาข้อมูลเกี่ยวกับชื่อเรื่อง ตัวละคร
+                                และแนวทางของเนื้อหาได้สะดวกยิ่งขึ้น
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="quote-banner" id="order">
-        <div class="container position-relative" style="z-index: 2;">
-            <p class="quote-sub">การเป็นผู้รอดชีวิตในตอนจบ ไม่ได้เริ่มจากการทำเรื่องยิ่งใหญ่เกินกำลัง</p>
+        <div class="container position-relative quote-container">
+            <p class="quote-sub">การไปถึงฉากสุดท้ายของโลกที่ล่มสลาย ไม่ได้เริ่มต้นจากเรื่องที่ยิ่งใหญ่เกินเอื้อม</p>
             <h2 class="quote-main">
-                "ไม่มีนักอ่านคนไหนไปถึงตอนจบได้ หากละทิ้งนิสัยการอ่านทีละตอนในทุกๆ วัน"
+                "ไม่มีนักอ่านคนไหนไปถึงบทสรุปได้ หากละทิ้งเรื่องราวที่ดำเนินไปทีละบทในทุกๆ วัน"
             </h2>
             <p class="quote-desc">
-                ร่วมพิสูจน์พลังของการอ่านที่แม้เริ่มต้นเพียงวันละไม่กี่นาที
-                แต่ก็สามารถติดตามการเดินทางอันยาวนานจนถึงฉากจบไปพร้อมกันได้ด้วยจังหวะที่คุณเลือกเอง
-                นิยายเรื่องนี้เหมาะสำหรับผู้ที่มองหานิยายยาวคุณภาพเยี่ยม ซึ่งไม่เพียงแต่มอบความสนุกเข้มข้นในทุกตอน
-                แต่ยังแฝงข้อคิดเรื่องความเพียร การอ่าน
-                และการไม่ยอมแพ้ต่อโชคชะตาที่สามารถนำมาร่วมอินไปกับตัวละครได้ตลอดเรื่อง
+                ร่วมเดินทางข้ามผ่านเรื่องราวอันยาวนานนับทศวรรษ
+                สัมผัสพลังแห่งการอ่านที่เปลี่ยนเศษเสี้ยวความหวังให้กลายเป็นปาฏิหาริย์
+                นิยายเรื่องนี้เหมาะสำหรับผู้ที่ต้องการดื่มด่ำกับมหากาพย์ที่ไม่เพียงเข้มข้นในทุกหน้ากระดาษ
+                แต่ยังเต็มไปด้วยความเพียรพยายาม การไม่ยอมจำนนต่อโชคชะตา และความผูกพันลึกซึ้งระหว่าง ‘ผู้อ่าน’ กับ
+                ‘เรื่องเล่า’ ที่จะทำให้คุณอินไปกับทุกตัวละครจนถึงบรรทัดสุดท้าย
             </p>
         </div>
     </section>
 
-    <section class="py-5 bg-light">
-        <div class="container">
-            <!-- หัวข้อประจำ Section -->
-            <h2 class="text-center fw-bold mb-4">คำถามที่พบบ่อย (FAQ)</h2>
-
-            <!-- Bootstrap Accordion -->
-            <div class="accordion mx-auto shadow-sm rounded-3 overflow-hidden" id="faqAccordion"
-                style="max-width: 800px;">
-
-                <!-- Item 1 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Q: ผมไม่ใช่สายกิจกรรม ไม่ชอบทำกิจกรรมเลย ไม่เข้ารับน้องได้ไหมครับ
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                        data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-secondary">
-                            A: การรับน้องนั้น มีขึ้นเพื่อกระชับความสัมพันธ์กับเพื่อนใหม่ที่กำลังจะเข้ามาเรียนในคณะ
-                            หรือสาขาวิชาเอก-โทนี้ด้วยกัน แต่ไม่มีการบังคับให้เข้าร่วมกิจกรรมนี้นะครับ
-                            ดังนั้นไม่ต้องเข้าก็ได้ เพราะไม่มีผลอะไรกับการใช้ชีวิตในสาขาวิชานี้แน่นอน
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Q: แล้วกิจกรรมรับน้องของคณะ และรับน้องของเอก-โทของที่นี่มีโซตัสไหมคะ
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-secondary">
-                            A: ที่นี่ไม่มีโซตัสทั้งรับน้องของคณะ และรับน้องของเอก-โท ดังนั้นไม่ต้องกังวลนะคะ
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Q: เคยได้ยินว่าเอกนี้มี "กิจกรรมห้องสมุดเคลื่อนที่"
-                            ซึ่งเป็นกิจกรรมที่เป็นไฮไลท์เด็ดของภาควิชา แต่ถ้าไม่อยากเข้าร่วมกิจกรรมนี้
-                            จะมีปัญหาอะไรไหมครับ
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-secondary">
-                            A: จริง ๆ ทางภาควิชาไม่ได้บังคับ แต่ "ขอความร่วมมือ"
-                            ดังนั้นเข้าร่วมเพื่อกิจกรรมเอาไว้ใส่ในแฟ้มรวบรวมผลงาน เพื่อสั่งสมประสบการณ์ก็ดีครับ
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Q: ไม่ประสงค์ฝึกงานได้ไหมคะ
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                        data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-secondary">
-                            A: ถ้าเป็นเด็ก "เอก" นี้ จะต้องฝึกงานนะคะ
-                            เพราะต้องนำประสบการณ์ที่ได้จากการฝึกงานไปเรียนต่อในรายวิชา "สัมมนาการฝึกปฏิบัติงาน"
-                            เป็นวิชาบังคับ ซึ่งจะต้องนับเป็นหน่วยกิตก่อนจบการศึกษาด้วย แต่ถ้าเป็นเด็ก "โท"
-                            ไม่จำเป็นต้องฝึกงานค่ะ
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-                <img src="images/c1.webp" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="images/c2.webp" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="images/c3.webp" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
     <footer>
         <div class="container text-center">
-            <p>
-            <p>
-            <p>
+            <p class="mb-0">
                 ขอบคุณข้อมูลจาก
                 <a href="https://www.mebmarket.com/index.php?action=series_detail&series_id=8509&page_no=1"
                     target="_blank" rel="noopener noreferrer" class="fs-4 fw-bold text-primary text-decoration-none">
                     mebmarket.com
                 </a>
             </p>
-            </p>
-            </p>
         </div>
     </footer>
 
     <!-- Bootstrap 5 JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Show a styled placeholder when a gallery image has not been added yet.
+        document.querySelectorAll(".gallery-image").forEach((image) => {
+            const markMissingImage = () => image.classList.add("is-missing");
+            image.addEventListener("error", markMissingImage);
+            if (image.complete && image.naturalWidth === 0) {
+                markMissingImage();
+            }
+        });
+
+        // Keep the gallery counter synchronized with manual and automatic slides.
+        const galleryCarousel = document.getElementById("bookGalleryCarousel");
+        const gallerySlideCounter = document.getElementById("gallerySlideCounter");
+        if (galleryCarousel && gallerySlideCounter) {
+            galleryCarousel.addEventListener("slid.bs.carousel", (event) => {
+                const slides = Array.from(galleryCarousel.querySelectorAll(".carousel-item"));
+                const currentIndex = slides.indexOf(event.relatedTarget) + 1;
+                gallerySlideCounter.textContent = `${String(currentIndex).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
+            });
+        }
+
+        // Close the mobile navigation after a section link is selected.
+        document.querySelectorAll("#navbarNav .nav-link").forEach((link) => {
+            link.addEventListener("click", () => {
+                const navMenu = document.getElementById("navbarNav");
+                if (window.bootstrap && navMenu.classList.contains("show")) {
+                    bootstrap.Collapse.getOrCreateInstance(navMenu).hide();
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

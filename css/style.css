@@ -1,0 +1,835 @@
+/* Custom CSS - embedded for single file execution */
+:root {
+    --primary-navy: #1B2534;
+    --dark-navy: #0F172A;
+    --accent-gold: #FFCA28;
+    --accent-gold-hover: #E5B219;
+    --light-bg: #F8FAFC;
+    --border-color: #E2E8F0;
+    --text-dark: #1E293B;
+    --text-muted: #64748B;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    color: var(--text-dark);
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.font-heading {
+    font-family: 'Prompt', 'Playfair Display', serif;
+}
+
+.navbar {
+    background-color: var(--primary-navy);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #FFFFFF !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-brand i {
+    color: var(--accent-gold);
+}
+
+.nav-link {
+    color: #CBD5E1 !important;
+    font-weight: 400;
+    margin: 0 8px;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-gold) !important;
+}
+
+.btn-gold {
+    background-color: var(--accent-gold);
+    color: var(--primary-navy);
+    font-weight: 600;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 202, 40, 0.25);
+}
+
+.btn-gold:hover {
+    background-color: var(--accent-gold-hover);
+    color: var(--primary-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 202, 40, 0.35);
+}
+
+.btn-outline-custom {
+    border: 2px solid var(--accent-gold);
+    color: #FFFFFF;
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--accent-gold);
+    color: var(--primary-navy);
+}
+
+.hero-section {
+    background-color: var(--primary-navy);
+    color: #FFFFFF;
+    padding: 4rem 0 6rem 0;
+    position: relative;
+}
+
+.badge-welcome {
+    color: var(--accent-gold);
+    font-style: italic;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.badge-welcome::before {
+    content: '';
+    display: inline-block;
+    width: 35px;
+    height: 2px;
+    background-color: var(--accent-gold);
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-desc {
+    color: #94A3B8;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 520px;
+}
+
+.stat-card-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stat-dot {
+    width: 14px;
+    height: 14px;
+    background-color: var(--accent-gold);
+    border-radius: 50%;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #94A3B8;
+    margin-bottom: 2px;
+}
+
+.stat-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.book-card {
+    background: #FFFFFF;
+    color: var(--text-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+}
+
+.book-cover {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.book-cover-1 {
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    color: #FFFFFF;
+    border-bottom: 4px solid var(--accent-gold);
+}
+
+.book-cover-2 {
+    background: linear-gradient(135deg, #334155 0%, #1E293B 100%);
+    color: #FFFFFF;
+    border-bottom: 4px solid var(--accent-gold);
+}
+
+.book-cover h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.benefits-section {
+    padding: 6rem 0;
+    background-color: var(--light-bg);
+}
+
+.section-badge {
+    color: #2563EB;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 1.2rem;
+}
+
+.benefit-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 2rem;
+    height: 100%;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.benefit-card:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+    transform: translateY(-5px);
+    border-color: var(--accent-gold);
+}
+
+.benefit-icon {
+    width: 56px;
+    height: 56px;
+    background-color: rgba(255, 202, 40, 0.15);
+    color: var(--primary-navy);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-card h5 {
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary-navy);
+}
+
+.benefit-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.learn-section {
+    padding: 6rem 0;
+    background-color: #FFFFFF;
+}
+
+.learn-number-box {
+    background-color: var(--accent-gold);
+    color: var(--primary-navy);
+    font-weight: 700;
+    font-size: 1.2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.learn-item {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    border: 1px solid var(--border-color);
+    height: 100%;
+    transition: border-color 0.2s ease;
+}
+
+.learn-item:hover {
+    border-color: var(--accent-gold);
+}
+
+.learn-item p {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.learn-image-container {
+    position: relative;
+    padding: 15px;
+}
+
+.learn-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    border: 4px solid var(--accent-gold);
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.learn-img {
+    position: relative;
+    z-index: 2;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 520px;
+}
+
+.quote-banner {
+    background: linear-gradient(135deg, #0F172A 0%, #1B2534 100%);
+    color: #FFFFFF;
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-banner::before {
+    content: '\f10d';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12rem;
+    color: rgba(255, 255, 255, 0.03);
+    pointer-events: none;
+}
+
+.quote-sub {
+    color: #94A3B8;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.quote-main {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin-bottom: 1.8rem;
+    line-height: 1.4;
+}
+
+.quote-desc {
+    color: #CBD5E1;
+    font-size: 1.05rem;
+    max-width: 850px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+footer {
+    background-color: #0B1120;
+    color: #64748B;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .quote-main {
+        font-size: 1.8rem;
+    }
+
+    .learn-image-container {
+        margin-top: 2.5rem;
+    }
+}
+
+/* คุมขนาดและสัดส่วนของรูปภาพในกล่อง */
+.book-cover {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    height: 320px;
+    /* ปรับความสูงของปกตามต้องการ */
+}
+
+.book-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* รักษาสัดส่วนรูปภาพไม่ให้เบี้ยว */
+    transition: transform 0.3s ease;
+}
+
+/* เอฟเฟกต์ขยายรูปภาพเล็กน้อยเมื่อ Hover */
+.book-card:hover .book-cover-img {
+    transform: scale(1.05);
+}
+
+
+/* Styles moved from the original inline style attributes */
+.rating-source {
+    font-size: 0.75rem;
+}
+
+.benefits-intro {
+    max-width: 800px;
+}
+
+.quote-container {
+    z-index: 2;
+}
+
+/* =========================================================
+   1. Styles moved from inline CSS
+   ========================================================= */
+
+.rating-source {
+    font-size: 0.75rem;
+}
+
+.benefits-intro {
+    max-width: 800px;
+}
+
+.quote-container {
+    z-index: 2;
+}
+
+
+/* =========================================================
+   2. Responsive Layout & General Settings
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id],
+header[id] {
+    scroll-margin-top: 90px;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-link {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+    white-space: nowrap;
+}
+
+.section-heading {
+    max-width: 820px;
+    margin: 0 auto 2.5rem;
+}
+
+
+/* =========================================================
+   3. Gallery Section & Bootstrap Carousel
+   ========================================================= */
+
+.gallery-section,
+.aeo-section,
+.seo-section {
+    padding: 5.5rem 0;
+}
+
+.gallery-section {
+    background-color: #FFFFFF;
+}
+
+.gallery-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.gallery-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gallery-counter {
+    color: var(--primary-navy);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.gallery-carousel {
+    overflow: hidden;
+    border-radius: 14px;
+    background-color: var(--dark-navy);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+}
+
+.gallery-image-frame {
+    position: relative;
+    height: clamp(300px, 48vw, 560px);
+    overflow: hidden;
+    background: linear-gradient(135deg, #1E293B, #0F172A);
+}
+
+.gallery-image-frame::before {
+    content: attr(data-placeholder);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: #CBD5E1;
+    font-size: 1.1rem;
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+
+.gallery-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: var(--dark-navy);
+}
+
+.gallery-image.is-missing {
+    opacity: 0;
+}
+
+.gallery-caption {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 3.5rem 5rem 1.4rem;
+    text-align: left;
+    background: linear-gradient(transparent, rgba(15, 23, 42, 0.88));
+}
+
+.gallery-caption h3 {
+    margin-bottom: 0.25rem;
+    color: #FFFFFF;
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.gallery-caption p {
+    margin: 0;
+    color: #E2E8F0;
+    font-size: 0.95rem;
+}
+
+.gallery-note {
+    margin: 1rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.gallery-note code {
+    color: var(--primary-navy);
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   4. AEO Section
+   ========================================================= */
+
+.aeo-section {
+    background-color: var(--light-bg);
+}
+
+.aeo-card {
+    position: relative;
+    height: 100%;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.aeo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
+}
+
+.aeo-number {
+    display: inline-block;
+    margin-bottom: 0.9rem;
+    color: var(--accent-gold-hover);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.aeo-card h3 {
+    margin-bottom: 0.8rem;
+    color: var(--primary-navy);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.aeo-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.97rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   5. SEO Section & Bootstrap Accordion
+   ========================================================= */
+
+.seo-section {
+    background-color: #FFFFFF;
+}
+
+.seo-accordion {
+    max-width: 960px;
+    margin: 0 auto;
+    --bs-accordion-border-color: var(--border-color);
+    --bs-accordion-btn-color: var(--primary-navy);
+    --bs-accordion-active-color: var(--primary-navy);
+    --bs-accordion-active-bg: #FFF9E8;
+}
+
+.seo-accordion .accordion-item {
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.seo-accordion .accordion-button {
+    padding: 1.15rem 1.35rem;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.seo-accordion .accordion-button:focus {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 0.2rem rgba(255, 202, 40, 0.18);
+}
+
+.seo-accordion .accordion-body {
+    color: var(--text-muted);
+    line-height: 1.85;
+}
+
+.seo-accordion .accordion-body p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   6. Responsive Design - Tablet
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .navbar-nav {
+        align-items: stretch;
+        padding-top: 0.75rem;
+    }
+
+    .nav-link {
+        padding: 0.55rem 0;
+    }
+
+    .gallery-section,
+    .aeo-section,
+    .seo-section {
+        padding: 4.5rem 0;
+    }
+}
+
+
+/* =========================================================
+   7. Responsive Design - Mobile
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .gallery-image-frame {
+        height: 360px;
+    }
+
+    .gallery-caption {
+        padding: 3rem 3.5rem 1rem;
+    }
+
+    .gallery-caption h3 {
+        font-size: 1.05rem;
+    }
+
+    .gallery-caption p {
+        font-size: 0.82rem;
+    }
+
+    .aeo-card {
+        padding: 1.5rem;
+    }
+
+    .stat-value {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* =========================================================
+   8. Responsive Design - Small Mobile
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .navbar-brand {
+        font-size: 1.35rem;
+    }
+
+    .gallery-section,
+    .aeo-section,
+    .seo-section {
+        padding: 3.5rem 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .gallery-image-frame {
+        height: 280px;
+        min-height: 240px;
+    }
+
+    .gallery-caption {
+        padding: 2.5rem 2.8rem 0.75rem;
+    }
+
+    .gallery-caption h3 {
+        font-size: 0.95rem;
+    }
+
+    .gallery-caption p {
+        font-size: 0.75rem;
+    }
+
+    .gallery-note {
+        font-size: 0.78rem;
+    }
+
+    .stat-card-box {
+        padding: 1rem;
+    }
+
+    .stat-item {
+        gap: 7px;
+    }
+
+    .stat-dot {
+        width: 9px;
+        height: 9px;
+        flex: 0 0 9px;
+    }
+
+    .stat-label {
+        font-size: 0.72rem;
+    }
+
+    .stat-value {
+        font-size: 0.78rem;
+        white-space: nowrap;
+    }
+}
+
+
+/* =========================================================
+   9. Accessibility - Reduced Motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .aeo-card,
+    .gallery-image,
+    .book-card {
+        transition: none;
+    }
+}
